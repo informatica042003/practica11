@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con IndexedDB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Usuarios</h1>
+        
+        <form id="userForm" class="crud-form">
+            <input type="hidden" id="userId">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono">
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" id="btnGuardar">Guardar</button>
+                <button type="button" id="btnCancelar">Cancelar</button>
+            </div>
+        </form>
+        
+        <div class="search-container">
+            <input type="text" id="busqueda" placeholder="Buscar usuarios...">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+        
+        <div class="table-container">
+            <table id="tablaUsuarios">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaBody">
+                    <!-- Datos se cargarán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
